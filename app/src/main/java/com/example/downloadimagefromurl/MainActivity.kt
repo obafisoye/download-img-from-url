@@ -89,7 +89,6 @@ fun downloadImage(url: String): Bitmap? {
     try {
         // open a connection to the URL and casts it as an HttpURLConnection
         val connection = URL(url).openConnection() as HttpURLConnection
-        connection.doInput = true
         connection.connect()
         // retrieve input stream (class that reads data through a source) and decode into bitmap
         val inputStream: InputStream = connection.inputStream
